@@ -1,0 +1,21 @@
+{
+  "name": "latihan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Routing.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-route": "^0.1.4",
+    "route": "^0.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon Routing.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
