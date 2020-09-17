@@ -1,0 +1,47 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/tambah" method="POST" autocomplete="on">
+    <input type="hidden" name="_id" value="{{buku._id}}">
+    <div class="form-group">
+        <label>Nama Buku</label>
+        <input type="text" class="form-control" name="nama" readonly value="{{buku.nama}}">
+        <div class="text-danger">
+            {{!-- {{buku.fullNameError}}</div> --}}
+    </div>
+    <div class="form-group">
+        <label>Author</label>
+        <input type="text" class="form-control" name="author" readonly value="{{buku.author}}">
+        <div class="text-danger">
+            {{!-- {{buku.emailError}}</div> --}}
+    </div>
+    <div class="form-group">
+        <label>Penerbit</label>
+        <input type="text" class="form-control" name="penerbit" readonly value="{{buku.penerbit}}">
+        <div class="text-danger">
+            {{!-- {{buku.emailError}}</div> --}}
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Tahun Terbit</label>
+            <input type="text" class="form-control" name="tahunTerbit" readonly value="{{buku.tahunTerbit}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Jumlah Halaman</label>
+            <input type="text" class="form-control" name="jumlahHalaman" readonly value="{{buku.jumlahHalaman}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Harga</label>
+            <input type="text" class="form-control" name="harga" readonly value="{{buku.harga}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Jumlah</label>
+            <input type="text" class="form-control" name="jumlah" placeholder="Jumlah" value="{{buku.jumlah}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/"><i class="fa fa-list-alt"></i> Kembali</a>
+    </div>
+</form>

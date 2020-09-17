@@ -1,0 +1,39 @@
+<h3>List Buku <p>{{viewTitle}}</h3>
+<a class="btn btn-info" href="/login"><i class="fa fa-database"></i> Login </a>
+<a class="btn btn-secondary" href="/register"><i class="fa fa-list-alt"></i> Register </a>
+
+{{!-- <a href="/user/userProfile"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>Profile</a> --}}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            {{!-- <th>Id Buku</th> --}}
+            <th>Nama Buku</th>
+            <th>Author</th>
+            <th>Penerbit</th>
+            <th>Tahun Terbit</th>
+            <th>Jumlah Halaman</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            {{!-- <td>{{this._id}}</td> --}}
+            <td>{{this.nama}}</td>
+            <td>{{this.author}}</td>
+            <td>{{this.penerbit}}</td>
+            <td>{{this.tahunTerbit}}</td>
+            <td>{{this.jumlahHalaman}}</td>
+            <td>
+                {{!-- {{addToCart}} --}}
+                {{!-- <a href="/buku/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a> --}}
+                {{!-- <a href="/buku/addToCart/{{this._id}}"
+                    onclick="return confirm('Ingin menambahkan buku ini ke Keranjang ?');"><i class="fa fa-cart fa-lg"
+                        aria-hidden="true"></i></a> --}}
+                {{!-- <a href="/buku/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a> --}}
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

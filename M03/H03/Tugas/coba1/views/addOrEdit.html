@@ -1,0 +1,68 @@
+<h3>{{ viewTitle }}</h3>
+
+<form action="/book" method="POST" autocomplete="off">
+  <input type="hidden" name="_id" value="{{ book._id }}" />
+  <div class="form-group">
+    <label>Nama Buku</label>
+    <input
+      type="text"
+      class="form-control"
+      name="nama"
+      placeholder="Nama Buku"
+      value="{{book.nama}}"
+    />
+    <div class="text-danger">{{book.namaError}}</div>
+  </div>
+  <div class="form-group">
+    <label>Author</label>
+    <input
+      type="text"
+      class="form-control"
+      name="author"
+      placeholder="Author"
+      value="{{book.author}}"
+    />
+    <div class="text-danger">{{book.authorError}}</div>
+  </div>
+  <div class="form-group">
+    <label>Penerbit</label>
+    <input
+      type="text"
+      class="form-control"
+      name="penerbit"
+      placeholder="Penerbit"
+      value="{{book.penerbit}}"
+    />
+    <div class="text-danger">{{book.penerbitError}}</div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Tahun Terbit</label>
+      <input
+        type="integer"
+        class="form-control"
+        name="tahunTerbit"
+        placeholder="Tahun Terbit"
+        value="{{book.tahunTerbit}}"
+      />
+    </div>
+    <div class="form-group col-md-6">
+      <label>Jumlah Halaman</label>
+      <input
+        type="integer"
+        class="form-control"
+        name="jumlahHalaman"
+        placeholder="Jumlah Halaman"
+        value="{{book.jumlahHalaman}}"
+      />
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-info">
+      <i class="fa fa-database"></i> Submit
+    </button>
+    <a class="btn btn-secondary" href="/book/list"
+      ><i class="fa fa-list-alt"></i> View All</a
+    >
+  </div>
+</form>

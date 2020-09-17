@@ -1,0 +1,29 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/editkeranjang" method="POST" autocomplete="on">
+{{#each d}}
+    {{!-- <input name="id_buku" readonly value="{{this.id_buku}}"> --}}
+    <input type="hidden" name="id_buku" value="{{this.id_buku}}">
+    <div class="form-group">
+        <label>Nama Buku</label>
+        <input type="text" class="form-control" name="nama" readonly value="{{this.nama}}">
+        <div class="text-danger">
+            {{!-- {{buku.fullNameError}}</div> --}}
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Harga</label>
+            <input type="text" class="form-control" name="harga" readonly value="{{this.harga}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Jumlah</label>
+            <input type="text" class="form-control" name="jumlah" placeholder="Jumlah" value="{{this.jumlah}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/"><i class="fa fa-list-alt"></i> Kembali</a>
+    </div>
+    {{/each}}
+</form>

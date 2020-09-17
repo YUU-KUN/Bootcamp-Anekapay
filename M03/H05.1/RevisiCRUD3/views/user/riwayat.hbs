@@ -1,0 +1,23 @@
+<h3>{{viewTitle}}</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            {{!-- <th>Id Buku</th> --}}
+            <th>Tanggal</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each keranjang}}
+        <tr>
+            {{!-- <td>{{this._id}}</td> --}}
+            <td>{{this.tanggal}}</td>
+            <td>{{this.total}}</td>
+            <td>
+                <a href="/detailRiwayat/{{this._id}}"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

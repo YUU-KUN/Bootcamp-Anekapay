@@ -1,0 +1,82 @@
+
+Rancangan Crud Buku
+
+Model Buku
+	- koneksi db 
+	field buku : 
+		- id : type : Int 
+		- nama : type : string 
+		- author : string 
+		- penerbit : string 
+		- tahun terbit : number 
+		- jumlah halaman : number 
+	- static method 
+	- intance method
+	
+Controller Buku
+	- model buku 
+	- index ( list buku)
+		- model list data buku 
+		- render view index buku 
+	- add ( buku ) form 
+		- render view form tambah buku 
+	- save ( buku )
+		- validasi ( abaikan )
+		- field data buku dari request form add 
+		- model simpan buku 
+			- gagal 
+				- pesan gagal 
+			- succes 
+				- pesan success 
+		- lempar ke hal index 
+	- edit ( ambil )
+		- id 
+		- model ambil data buku 
+		- render form view edit buku 
+	- update ()
+		- validasi ( abaikan )
+		- id 
+		- field data buku dari request form 
+		- model update data buku 
+			- gagal 
+				- pesan gagal 
+			- success
+				- pesan succes
+			- lempar ke hal index 
+	- delete 
+		- id buku 
+		- model cari buku 
+			- ditemukan 
+				- model delete buku 
+					- succes 
+						- pesan succes 
+					- gagal 
+						- pesan gagal 
+			- tidak di temukan 
+				- pesan tidak ditemukan 
+
+			- lempar ke hal index 
+View Buku
+	- view index:
+		- baca pesan ( gagal / succes )
+		- button tambah
+			- 
+		- daftar table buku
+			- button edit 
+			- button hapus 
+		- 
+	- view tambah form buku 
+		- nama : type : string 
+		- author : string 
+		- penerbit : string 
+		- tahun terbit : number 
+		- jumlah halaman : number 
+		- simpan 
+	- view edit form buku 
+		- nama : type : string 
+		- author : string 
+		- penerbit : string 
+		- tahun terbit : number 
+		- jumlah halaman : number 
+		- simpan 
+	

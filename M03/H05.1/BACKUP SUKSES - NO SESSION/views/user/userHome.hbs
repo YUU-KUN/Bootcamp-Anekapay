@@ -1,0 +1,35 @@
+<h3> Buku List</h3>
+
+<a class='btn btn-secondary' href='/userLogin'><i class='fa fa-plus'></i> Login</a>
+<a class='btn btn-secondary' href='/userRegister'><i class='fa fa-plus'></i> Register</a>
+<h5>
+    {{email}}
+</h5>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            {{!-- <th>Id Buku</th> --}}
+            <th>Nama Buku</th>
+            <th>Author</th>
+            <th>Penerbit</th>
+            <th>Tahun Terbit</th>
+            <th>Jumlah Halaman</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            {{!-- <td>{{this._id}}</td> --}}
+            <td>{{this.nama}}</td>
+            <td>{{this.author}}</td>
+            <td>{{this.penerbit}}</td>
+            <td>{{this.tahunTerbit}}</td>
+            <td>{{this.jumlahHalaman}}</td>
+            <td>
+                {{!-- <a href="/buku/addToCart/{{this._id}}" onclick="return confirm('Are you sure to add this book ?');"><i class="fa fa-cart fa-lg" aria-hidden="true"></i></a> --}}
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
