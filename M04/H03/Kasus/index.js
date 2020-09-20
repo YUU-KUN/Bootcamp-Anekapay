@@ -9,13 +9,22 @@ app.get('/', (req, res) => {
 // io.on('connection', (socket) => {
 //   console.log('A user connected');
 // });
+io.emit('some event', { someProperty: 'some value', otherProperty: 'other value' }) // This will emit the event to all connected sockets
 
 io.on('connection', (socket) => {
+    io.emit('user baru', 'Ada user baru masuk nih~');
     console.log('a user connected');
+
+    socket.on('chat message', (msg) => {
+        console.log('message: ' + msg)
+        io.emit('chat message', (msg))
+    })
+
     socket.on('disconnect', () => {
         console.log('user disconnected');
     });
 });
+
 
 http.listen(3000, () => {
     console.log('listening on http://localhost:3000');
