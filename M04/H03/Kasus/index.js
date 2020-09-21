@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 // io.on('connection', (socket) => {
 //   console.log('A user connected');
 // });
-io.emit('some event', { someProperty: 'some value', otherProperty: 'other value' }) // This will emit the event to all connected sockets
+io.emit('some event', { someProperty: 'some value', otherProperty: 'other value' }) // Emit event ke socket yang online
 
 io.on('connection', (socket) => {
     io.emit('user baru', 'Ada user baru masuk nih~');
