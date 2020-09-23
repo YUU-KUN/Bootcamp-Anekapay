@@ -1,5 +1,6 @@
 require('./models/db')
 
+
 const express = require('express')
 const path = require('path')
 const exphbs = require('express-handlebars')
@@ -42,5 +43,7 @@ app.use('/buku', bukuController)
 app.use('/', loginController)
 app.use('/', userController)
 app.use('/', adminController)
+
+module.exports = {app}
 
 

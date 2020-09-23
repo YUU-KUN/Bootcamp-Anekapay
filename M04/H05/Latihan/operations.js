@@ -9,11 +9,20 @@ const validateNumbers = (x, y) => {
     }
     return true
 }
-
- module.exports = {
-     tambah,
-     kurang,
-     kali,
-     bagi,
-     validateNumbers
+const luasPersegiPanjang = (x, y) => {
+    if (x == 0 || y == 0) {
+        return "inputan tidak valid"
+    } else if ( typeof(x) === 'string' || typeof(y) === 'string') {
+        return "inputan tidak boleh huruf"
     }
+    return x * y
+}
+
+module.exports = {
+    tambah,
+    kurang,
+    kali,
+    bagi,
+    validateNumbers,
+    luasPersegiPanjang
+}

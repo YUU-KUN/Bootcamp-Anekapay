@@ -31,6 +31,7 @@ it('menghitung penjumlahan 1 dan 3', () => {
     assert.equal(operations.bagi(34, 2), 17)
 })
 
+
 it('test gagal kalau salah satunya bukan angka', () => {
     assert.equal(operations.validateNumbers('apa ya', 4), false)
 })
@@ -41,4 +42,20 @@ it('test gagal kalau keduanya bukan angka', () => {
 
 it('testmya berhasil kalau keduanya adalah angka', () => {
     assert.equal(operations.validateNumbers(6, 2), true)
+})
+
+it('menghitung luas persegi panjang ', () => {
+    assert.equal(operations.luasPersegiPanjang(34, 2), 68)
+})
+
+it('menghitung luas persegi panjang tidak sesuai ', () => {
+    assert.equal(operations.luasPersegiPanjang(34, 9), 68) //SALAH
+})
+
+it('menghitung luas persegi panjang inputan tidak valid', () => {
+    assert.equal(operations.luasPersegiPanjang(34, 0), "inputan tidak valid")
+})
+
+it('menghitung luas persegi panjang inputan huruf', () => {
+    assert.equal(operations.luasPersegiPanjang("apa", "ya"), "inputan tidak boleh huruf")
 })
